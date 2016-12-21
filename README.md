@@ -1,4 +1,4 @@
-# CentOS 6 Ansible Test Image
+# CentOS 7 Ansible Test Image
 
 **This image is not currently aimed at public consumption. It exists as an internal tool for testing [Ansible](http://www.ansibleworks.com/) development.**
 
@@ -22,7 +22,7 @@ docker build -t docker-ansible-centos .
   docker run --detach --privileged \
     --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro \
     --volume=$(pwd):/etc/ansible/roles/test_role:ro \
-    petemcw/docker-ansible-centos:6 /sbin/init
+    petemcw/docker-ansible-centos:latest /usr/sbin/init
   ```
 
 - Run Ansible inside the container:
